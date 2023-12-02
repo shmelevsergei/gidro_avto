@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600&family=Golos+Text:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        @apply font-golos text-base text-text_main
+    }
+    address {
+        @apply not-italic
+    }
+    * input {
+        @apply outline-none
+    }
+}
+
+@layer components {
+    .flex-center {
+        @apply flex justify-center items-center
+    }
+
+    .link-menu_icons {
+        @apply w-12 h-12 p-2 rounded-full border-1.6 border-gray_light flex justify-center items-center transition-all
+    }
+
+    .bg-section {
+        @apply bg-cover bg-center bg-no-repeat
+    }
+
+    .pagination-section_1-card .swiper-pagination-bullet {
+        @apply h-0.5 bg-gray_bg w-full z-10 block transition-all
+    }
+
+    .pagination-section_1-card .swiper-pagination-bullet-active {
+        @apply bg-orange_main
+    }
+    .burger-button {
+        @apply w-10 h-10 flex-col gap-1.5 items-center justify-center
+    }
+    .burger-button span {
+        @apply w-full h-1 bg-orange_main block
+    }
+    .close-menu-btn {
+        @apply w-10 h-10 relative
+    }
+
+    .close-menu-btn span {
+        @apply w-full h-1 bg-white block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
+    }
+
+    .close-menu-btn span:first-child {
+        @apply rotate-[45deg]
+    }
+    .close-menu-btn span:last-child {
+        @apply rotate-[-45deg]
+    }
+
+    .menu {
+        @apply md:-translate-x-full
+    }
+    .menu.open {
+        @apply md:-translate-x-0
+    }
+}
+
+@layer utilities {
+    .link-menu_icons:hover {
+        @apply shadow-xl
+    }
+}
+
